@@ -39,7 +39,7 @@ export default function HeroSection() {
       </div>
 
       {/* Floating badge */}
-      <div className="glass-card rounded-full px-8 py-4 shadow-lg animate-float-bounce"
+      <div className="glass-card rounded-full px-8 py-4 shadow-lg"
         style={{ animationDelay: '0.3s' }}>
         <p className="text-pink-600 font-bold text-lg">
           🎀 22 سنة من الجمال والتألق 🎀
@@ -47,11 +47,11 @@ export default function HeroSection() {
       </div>
 
       {/* Scroll hint */}
-      <div className="absolute bottom-10 left-0 right-0 flex flex-col items-center gap-2 animate-float-bounce"
+      <div className="absolute bottom-10 left-0 right-0 flex flex-col items-center gap-2"
         style={{ animationDelay: '1s' }}>
         <p className="text-pink-300 text-sm font-medium">اسحبي للأسفل 🌸</p>
         <div className="w-6 h-10 rounded-full border-2 border-pink-300 flex items-start justify-center pt-2">
-          <div className="w-1.5 h-3 rounded-full bg-pink-400 animate-bounce" />
+          <div className="w-1.5 h-3 rounded-full bg-pink-400" />
         </div>
       </div>
     </section>

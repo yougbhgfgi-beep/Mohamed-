@@ -28,7 +28,7 @@ export default function GallerySection() {
             <div key={i} className="gallery-item rounded-3xl overflow-hidden shadow-xl cursor-pointer relative group border-4 border-white"
               onClick={() => setSelected(img)}>
               <img src={img.src} alt={img.label}
-                className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110" />
+                className="w-full h-80 object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-pink-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6 px-4 text-center">
                 <p className="text-white font-bold text-base leading-snug drop-shadow-md">{img.label}</p>
               </div>
@@ -47,7 +47,7 @@ export default function GallerySection() {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4"
           style={{ background: 'rgba(0,0,0,0.85)', backdropFilter: 'blur(10px)' }}
           onClick={() => setSelected(null)}>
-          <div className="relative max-w-2xl w-full animate-fade-in-scale" onClick={(e) => e.stopPropagation()}>
+          <div className="relative max-w-2xl w-full" onClick={(e) => e.stopPropagation()}>
             <button onClick={() => setSelected(null)}
               className="absolute -top-5 -right-5 w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-2xl z-10 hover:bg-pink-50 transition-colors">
               <X size={24} className="text-pink-500" />

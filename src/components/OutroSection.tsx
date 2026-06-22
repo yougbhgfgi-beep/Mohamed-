@@ -5,11 +5,11 @@ const OUTRO_LINES = [
   'إلى روحي وشريكة عمري... شمس 🔆 Shams',
   'حبي لكِ لا يُكتب في سطور، ولا تكفيه الكلمات...',
   'منذ ✨ 4/9/2025 ✨، عرفت معنى السعادة الحقيقية...',
-  'أنتِ النور الذي أضاء حياتي، والدفء الذي يسكن قلبي.',
+  'انتي النور الذي أضاء حياتي، والدفء الذي يسكن قلبي.',
   'كل ثانية معكِ هي حياة كاملة...',
   'وكل نبضة في قلبي تنطق باسمكِ.',
   'عيد ميلادكِ الثاني والعشرين هو احتفال بوجود أعظم نعمة في حياتي.',
-  'كل عام وأنتِ عشقي الأبدي... أحبك أكثر مما تتخيلين. 💖',
+  'كل عام وانتي عشقي الأبدي... أحبك أكثر مما تتخيلين. 💖',
 ];
 
 export default function OutroSection() {
@@ -39,7 +39,7 @@ export default function OutroSection() {
     <section className="relative z-10 py-24 px-4 text-center">
       <div className="max-w-xl mx-auto">
         <div className="mb-8">
-          <div className="text-5xl mb-4 animate-float-bounce">🎀</div>
+          <div className="text-5xl mb-4">🎀</div>
           <h2 className="text-3xl font-black text-pink-600 mb-3">الخاتمة 🌹</h2>
           <p className="text-pink-400 text-lg">رسالة أخيرة لقلبكِ الجميل</p>
         </div>
@@ -108,7 +108,7 @@ export default function OutroSection() {
               /* Final Scene Card */
               <div className="glass-card rounded-3xl p-8 max-w-md w-full shadow-[0_0_50px_rgba(255,20,147,0.3)] animate-fade-in-scale text-center relative border border-pink-500/30 bg-black/40 backdrop-blur-md mt-10">
                 
-                <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-32 h-32 rounded-full border-4 border-pink-400 overflow-hidden shadow-[0_0_40px_rgba(255,105,180,0.6)] animate-pulse-glow z-20 bg-pink-100">
+                <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-32 h-32 rounded-full border-4 border-pink-400 overflow-hidden shadow-[0_0_40px_rgba(255,105,180,0.6)] z-20 bg-pink-100">
                   <img src="./assets/img3.jpeg" alt="شمس" className="w-full h-full object-cover" />
                 </div>
 

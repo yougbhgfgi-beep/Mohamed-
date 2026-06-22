@@ -17,27 +17,49 @@ type Stage = 'login' | 'envelope' | 'main';
 export default function App() {
   const [stage, setStage] = useState<Stage>('login');
   const [musicOn, setMusicOn] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const envelopeAudioRef = useRef<HTMLAudioElement | null>(null);
+  const mainAudioRef = useRef<HTMLAudioElement | null>(null);
 
   const handleLogin = useCallback(() => {
     setStage('envelope');
     setTimeout(() => {
-      if (audioRef.current) {
-        audioRef.current.play().catch(() => {});
+      if (envelopeAudioRef.current) {
+        envelopeAudioRef.current.play().catch(() => {});
         setMusicOn(true);
       }
     }, 300);
   }, []);
 
-  const toggleMusic = useCallback(() => {
-    if (!audioRef.current) return;
+  const handleCloseEnvelope = useCallback(() => {
+    setStage('main');
     if (musicOn) {
-      audioRef.current.pause();
+      if (envelopeAudioRef.current) envelopeAudioRef.current.pause();
+      if (mainAudioRef.current) mainAudioRef.current.play().catch(() => {});
+    }
+  }, [musicOn]);
+
+  const toggleMusic = useCallback(() => {
+    const currentAudio = stage === 'envelope' ? envelopeAudioRef.current : mainAudioRef.current;
+    if (!currentAudio) return;
+
+    if (musicOn) {
+      currentAudio.pause();
     } else {
-      audioRef.current.play().catch(() => {});
+      currentAudio.play().catch(() => {});
     }
     setMusicOn(!musicOn);
-  }, [musicOn]);
+  }, [musicOn, stage]);
+
+  useEffect(() => {
+    if (!musicOn) return;
+    if (stage === 'envelope') {
+      mainAudioRef.current?.pause();
+      envelopeAudioRef.current?.play().catch(() => {});
+    } else if (stage === 'main') {
+      envelopeAudioRef.current?.pause();
+      mainAudioRef.current?.play().catch(() => {});
+    }
+  }, [stage, musicOn]);
 
   if (stage === 'login') {
     return <LoginPage onLogin={handleLogin} />;
@@ -55,23 +77,18 @@ export default function App() {
       {/* Music toggle button */}
       <div className="fixed top-6 left-6 z-30">
         <button onClick={toggleMusic}
-          className={`relative w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 active:scale-90 ${musicOn ? 'animate-pulse-glow' : ''}`}
+          className={`relative w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 active:scale-90`}
           style={{ background: 'linear-gradient(135deg, #ff69b4, #ff1493)' }}>
           {musicOn ? <Volume2 size={22} className="text-white" /> : <VolumeX size={22} className="text-white" />}
         </button>
-        {musicOn && (
-          <span className="absolute -top-2 -right-2 text-sm animate-float-bounce" style={{ animationDelay: '0s' }}>🎵</span>
-        )}
-        {musicOn && (
-          <span className="absolute -bottom-2 -left-2 text-xs animate-float-bounce" style={{ animationDelay: '0.5s' }}>🎶</span>
-        )}
       </div>
 
-      {/* Hidden audio element */}
-      <audio ref={audioRef} src="./08.Sadakny_Khalas.mp3" loop preload="auto" />
+      {/* Hidden audio elements */}
+      <audio ref={envelopeAudioRef} src="./08.Sadakny_Khalas.mp3" loop preload="auto" />
+      <audio ref={mainAudioRef} src="./main-song.mpeg" loop preload="auto" />
 
       {stage === 'envelope' && (
-        <EnvelopeModal onClose={() => setStage('main')} />
+        <EnvelopeModal onClose={handleCloseEnvelope} />
       )}
 
       {/* Page content — always rendered so it's behind the envelope modal */}

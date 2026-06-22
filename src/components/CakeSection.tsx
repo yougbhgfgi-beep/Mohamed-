@@ -87,7 +87,7 @@ export default function CakeSection() {
       <div className="max-w-2xl mx-auto">
         <h2 className="text-3xl font-black text-pink-600 mb-2">تورتة عيد ميلادكِ 🎂</h2>
         <p className="text-pink-400 mb-10">
-          {blown ? 'كل عام وأنتِ بخير يا قلبي! 💖' : 'اضغطي على الشمعة لإطفائها 🕯️'}
+          {blown ? 'كل عام وانتي بخير يا قلبي! 💖' : 'اضغطي على الشمعة لإطفائها 🕯️'}
         </p>
 
         {/* Cake */}
@@ -171,7 +171,7 @@ export default function CakeSection() {
             <p className="text-pink-700 leading-relaxed text-lg">
               22 سنة من الجمال والرقي والأنوثة...
               أتمنى لكِ سنةً مليئة بالسعادة والنجاح والحب والخير.
-              كل عام وأنتِ بألف خير يا قلبي 💖
+              كل عام وانتي بألف خير يا قلبي 💖
             </p>
             <div className="flex justify-center gap-2 mt-4 text-3xl">
               {['🎉', '🎊', '🌟', '🎈', '💝'].map((e, i) => (

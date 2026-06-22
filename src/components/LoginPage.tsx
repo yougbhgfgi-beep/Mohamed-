@@ -50,17 +50,17 @@ export default function LoginPage({ onLogin }: Props) {
         {/* Top decoration */}
         <div className="flex justify-center mb-6 gap-2">
           {['💕', '🌸', '💖', '🌸', '💕'].map((e, i) => (
-            <span key={i} className="text-2xl animate-float-bounce" style={{ animationDelay: `${i * 0.2}s` }}>{e}</span>
+            <span key={i} className="text-2xl">{e}</span>
           ))}
         </div>
 
         {/* Birthday image */}
         <div className="flex justify-center mb-5">
-          <div className="relative w-24 h-24 rounded-full flex items-center justify-center animate-pulse-glow overflow-hidden"
+          <div className="relative w-24 h-24 rounded-full flex items-center justify-center overflow-hidden"
             style={{ background: 'linear-gradient(135deg, #ff69b4, #ff1493)', boxShadow: '0 0 30px rgba(255,105,180,0.5)' }}>
             <img src="./assets/img2.jpeg" alt="شمس" className="w-full h-full object-cover" />
-            <span className="absolute -top-1 -right-1 text-lg animate-float-bounce" style={{ animationDelay: '0.5s' }}>🎂</span>
-            <span className="absolute -bottom-1 -left-1 text-sm animate-float-bounce" style={{ animationDelay: '1s' }}>✨</span>
+            <span className="absolute -top-1 -right-1 text-lg">🎂</span>
+            <span className="absolute -bottom-1 -left-1 text-sm">✨</span>
           </div>
         </div>
 
@@ -88,7 +88,7 @@ export default function LoginPage({ onLogin }: Props) {
           )}
 
           <button type="submit" disabled={loading}
-            className="w-full py-4 rounded-2xl font-bold text-xl text-white transition-all duration-300 hover:scale-105 active:scale-95 animate-pulse-glow"
+            className="w-full py-4 rounded-2xl font-bold text-xl text-white transition-all duration-300 hover:scale-105 active:scale-95"
             style={{ background: 'linear-gradient(135deg, #ff69b4, #ff1493)' }}>
             {loading ? (
               <span className="flex items-center justify-center gap-2">
