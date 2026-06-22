@@ -1,8 +1,14 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Sparkles, X } from 'lucide-react';
 
 export default function MagicSection() {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (open) document.body.style.overflow = 'hidden';
+    else document.body.style.overflow = 'unset';
+    return () => { document.body.style.overflow = 'unset'; };
+  }, [open]);
 
   return (
     <section className="relative z-10 py-20 px-4 text-center">

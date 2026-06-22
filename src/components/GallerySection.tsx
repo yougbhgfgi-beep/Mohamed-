@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { X, ImagePlus } from 'lucide-react';
 
 const IMAGES = [
@@ -9,6 +9,12 @@ const IMAGES = [
 
 export default function GallerySection() {
   const [selected, setSelected] = useState<typeof IMAGES[0] | null>(null);
+
+  useEffect(() => {
+    if (selected) document.body.style.overflow = 'hidden';
+    else document.body.style.overflow = 'unset';
+    return () => { document.body.style.overflow = 'unset'; };
+  }, [selected]);
 
   return (
     <section className="relative z-10 py-20 px-4">

@@ -18,6 +18,12 @@ export default function CakeSection() {
   const [confetti, setConfetti] = useState<Confetti[]>([]);
   const [showWish, setShowWish] = useState(false);
 
+  useEffect(() => {
+    if (showWish) document.body.style.overflow = 'hidden';
+    else document.body.style.overflow = 'unset';
+    return () => { document.body.style.overflow = 'unset'; };
+  }, [showWish]);
+
   const blowCandles = () => {
     if (blown) return;
     setBlown(true);

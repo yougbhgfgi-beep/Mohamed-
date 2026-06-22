@@ -45,6 +45,11 @@ interface Props {
 export default function EnvelopeModal({ onClose }: Props) {
   const [opened, setOpened] = useState(false);
 
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = 'unset'; };
+  }, []);
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4"
       style={{ background: 'rgba(255, 20, 147, 0.12)', backdropFilter: 'blur(8px)' }}>
