@@ -84,8 +84,8 @@ export default function App() {
       </div>
 
       {/* Hidden audio elements */}
-      <audio ref={envelopeAudioRef} src="./08.Sadakny_Khalas.mp3" loop preload="auto" />
-      <audio ref={mainAudioRef} src="./main-song.mpeg" loop preload="auto" />
+      <audio ref={envelopeAudioRef} src="./main-song.mpeg" loop preload="auto" />
+      <audio ref={mainAudioRef} src="./08.Sadakny_Khalas.mp3" loop preload="auto" />
 
       {stage === 'envelope' && (
         <EnvelopeModal onClose={handleCloseEnvelope} />
