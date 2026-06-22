@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
 import { Volume2, VolumeX } from 'lucide-react';
 import FloatingBackground from './components/FloatingBackground';
 import LoginPage from './components/LoginPage';

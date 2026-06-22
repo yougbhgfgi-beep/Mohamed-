@@ -24,7 +24,7 @@ export default function MagicSection() {
       {open && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4"
           style={{ background: 'rgba(255, 20, 147, 0.1)', backdropFilter: 'blur(10px)' }}>
-          <div className="glass-card rounded-3xl p-8 max-w-lg w-full shadow-2xl animate-fade-in-scale relative text-right"
+          <div className="glass-card rounded-3xl p-8 max-w-lg w-full shadow-2xl relative text-right"
             style={{ boxShadow: '0 30px 70px rgba(255, 105, 180, 0.35)' }}>
 
             <button onClick={() => setOpen(false)}
@@ -50,7 +50,7 @@ export default function MagicSection() {
                 لا تنسي أبداً كم انتي مميزة وجميلة. 🌸
               </p>
               <p className="font-bold text-pink-600">
-                عيد ميلادكِ الثاني والعشرين... بداية أجمل فصول حياتكِ! ✨
+                عيد ميلادكِ الثالث والعشرين... بداية أجمل فصول حياتكِ! ✨
               </p>
             </div>
 

@@ -14,7 +14,7 @@ export default function HeroSection() {
       {/* Main title */}
       <div className="mb-4">
         <p className="text-pink-400 font-semibold text-xl mb-3 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-          ✨ 25/5/2004 ✨
+          ✨ 26/6/2003 ✨
         </p>
         <h1 className="font-black leading-tight shimmer-text"
           style={{ fontSize: 'clamp(3.5rem, 10vw, 7rem)' }}>
@@ -42,7 +42,7 @@ export default function HeroSection() {
       <div className="glass-card rounded-full px-8 py-4 shadow-lg"
         style={{ animationDelay: '0.3s' }}>
         <p className="text-pink-600 font-bold text-lg">
-          🎀 22 سنة من الجمال والتألق 🎀
+          🎀 23 سنة من الجمال والتألق 🎀
         </p>
       </div>
 

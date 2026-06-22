@@ -29,12 +29,9 @@ export default function GallerySection() {
               onClick={() => setSelected(img)}>
               <img src={img.src} alt={img.label}
                 className="w-full h-80 object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-pink-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6 px-4 text-center">
-                <p className="text-white font-bold text-base leading-snug drop-shadow-md">{img.label}</p>
-              </div>
-              {/* Overlay shimmer */}
-              <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-lg">
-                <span className="text-lg">💕</span>
+              {/* Static label always visible at bottom */}
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-pink-900/70 to-transparent flex items-end justify-center pb-4 px-4 text-center">
+                <p className="text-white font-bold text-sm leading-snug drop-shadow-md">{img.label}</p>
               </div>
             </div>
           ))}

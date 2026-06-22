@@ -93,9 +93,9 @@ export default function CakeSection() {
         {/* Cake */}
         <div className="flex flex-col items-center cursor-pointer group" onClick={blowCandles}>
           {/* Candles row */}
-          <div className="flex gap-2 items-end mb-1 transition-transform group-hover:scale-105 z-20">
+          <div className="flex gap-2 items-end mb-1 transition-transform group-hover:scale-105 z-20" dir="ltr">
             <NumberCandle digit="2" />
-            <NumberCandle digit="2" />
+            <NumberCandle digit="3" />
           </div>
 
           {/* Top tier */}
@@ -156,7 +156,7 @@ export default function CakeSection() {
       {showWish && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4"
           style={{ background: 'rgba(255, 20, 147, 0.1)', backdropFilter: 'blur(10px)' }}>
-          <div className="glass-card rounded-3xl p-8 max-w-md w-full shadow-2xl animate-fade-in-scale relative text-center"
+          <div className="glass-card rounded-3xl p-8 max-w-md w-full shadow-2xl relative text-center"
             style={{ boxShadow: '0 30px 70px rgba(255, 105, 180, 0.35)' }}>
 
             <button onClick={() => setShowWish(false)}
@@ -169,7 +169,7 @@ export default function CakeSection() {
               عيد ميلاد سعيد يا شمس 🔆 Shams! 🎂
             </h3>
             <p className="text-pink-700 leading-relaxed text-lg">
-              22 سنة من الجمال والرقي والأنوثة...
+              23 سنة من الجمال والرقي والأنوثة...
               أتمنى لكِ سنةً مليئة بالسعادة والنجاح والحب والخير.
               كل عام وانتي بألف خير يا قلبي 💖
             </p>
