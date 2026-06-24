@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 
 interface Confetti {
@@ -91,9 +91,9 @@ export default function CakeSection() {
       </div>
 
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-3xl font-black text-pink-600 mb-2">تورتة عيد ميلادكِ 🎂</h2>
+        <h2 className="text-3xl font-black text-pink-600 mb-2">تورتة عيد ميلادك 🎂</h2>
         <p className="text-pink-400 mb-10">
-          {blown ? 'كل عام وانتي بخير يا قلبي! 💖' : 'اضغطي على الشمعة لإطفائها 🕯️'}
+          {blown ? 'كل عام وانت بخير يا قلبي! 💖' : 'اضغط على الشمعة لإطفائها 🕯️'}
         </p>
 
         {/* Cake */}
@@ -101,7 +101,7 @@ export default function CakeSection() {
           {/* Candles row */}
           <div className="flex gap-2 items-end mb-1 transition-transform group-hover:scale-105 z-20" dir="ltr">
             <NumberCandle digit="2" />
-            <NumberCandle digit="3" />
+            <NumberCandle digit="5" />
           </div>
 
           {/* Top tier */}
@@ -136,7 +136,7 @@ export default function CakeSection() {
           <div className="relative w-80 h-24 rounded-b-3xl shadow-xl overflow-hidden -mt-1"
             style={{ background: 'linear-gradient(135deg, #ff85a1, #ff69b4)' }}>
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-white font-bold text-xl">شمس 🔆 Shams 💝</span>
+              <span className="text-white font-bold text-xl">محمد 🔆 𝑀𝑜ℎ𝑎𝑚𝑀𝑒𝑑</span>
             </div>
             {/* Bottom decoration */}
             <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-2">
@@ -153,7 +153,7 @@ export default function CakeSection() {
 
         {!blown && (
           <p className="mt-6 text-pink-400 text-sm">
-            اضغطي على التورتة لإطفاء الشمع! ✨
+            اضغط على التورتة لإطفاء الشمع! ✨
           </p>
         )}
       </div>
@@ -172,12 +172,12 @@ export default function CakeSection() {
 
             <div className="text-6xl mb-4">🎊</div>
             <h3 className="text-3xl font-black shimmer-text mb-4">
-              عيد ميلاد سعيد يا شمس 🔆 Shams! 🎂
+              عيد ميلاد سعيد يا محمد 🔆 𝑀𝑜ℎ𝑎𝑚𝑀𝑒𝑑
             </h3>
             <p className="text-pink-700 leading-relaxed text-lg">
-              23 سنة من الجمال والرقي والأنوثة...
-              أتمنى لكِ سنةً مليئة بالسعادة والنجاح والحب والخير.
-              كل عام وانتي بألف خير يا قلبي 💖
+              25 سنة من العظمة والرجولة والجمال...
+              أتمنى لك سنة مليئة بالسعادة والنجاح والحب والخير.
+              كل عام وانت بخير يا قلبي 💖
             </p>
             <div className="flex justify-center gap-2 mt-4 text-3xl">
               {['🎉', '🎊', '🌟', '🎈', '💝'].map((e, i) => (

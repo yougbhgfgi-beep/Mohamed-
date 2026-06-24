@@ -1,21 +1,14 @@
 export default function SweetWords() {
   const reasons = [
-    { title: 'عيونك', text: 'بشوف فيهم مستقبلي وحياتي الجاية كلها.', icon: '👀' },
-    { title: 'وجودك', text: 'كفاية بس إنك موجودة، ده بيخلي الحياة ليها طعم ولون.', icon: '🌟' },
-    { title: 'حنيتك', text: 'أحن وأطيب قلب في الدنيا، بتمسحي دمعتي قبل ما تنزل.', icon: '❤️' },
-    { title: 'أماني', text: 'معاكي بحس إني مسنود على جبل، ولا حاجة تقدر تكسرني.', icon: '🛡️' },
-  ];
-
-  const moments = [
-    { text: 'اول اكله سوشي لينا 😂', icon: '🍣' },
-    { text: 'المشي اللي بنفضل نمشيه واحنا مش عارفين رايحين فين', icon: '🚶‍♀️🚶‍♂️' },
-    { text: 'اول شارع وقفنا فيه سوا', icon: '🛣️' },
-    { text: 'اول ماسكه ايد وعيونك وكسوفك', icon: '🤝' },
+    { title: 'عيونك', text: 'بشوف فيها مستقبلي وحياتي الجاية كلها.', icon: '👀' },
+    { title: 'وجودك', text: 'كفاية بس إنك موجود، ده بيخلي الحياة ليها طعم ولون.', icon: '🌟' },
+    { title: 'حنيتك', text: 'أحن وأطيب قلب في الدنيا، بتمسح دمعتي قبل ما تنزل.', icon: '❤️' },
+    { title: 'أماني', text: 'معاك بحس إني مسنودة على جبل، ولا حاجة تقدر تكسرني.', icon: '🛡️' },
   ];
 
   return (
     <section className="relative z-10 py-20 px-4">
-      <div className="max-w-5xl mx-auto space-y-20">
+      <div className="max-w-5xl mx-auto">
         
         {/* Why I love you section */}
         <div>
@@ -41,35 +34,6 @@ export default function SweetWords() {
                   <div className="h-1 w-16 rounded-full"
                     style={{ background: 'linear-gradient(90deg, #ff69b4, #ff1493)' }} />
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Divider */}
-        <div className="flex items-center justify-center gap-4 px-4">
-          <div className="h-px flex-1 max-w-xs bg-gradient-to-r from-transparent to-pink-200" />
-          <span className="text-2xl">💫</span>
-          <div className="h-px flex-1 max-w-xs bg-gradient-to-l from-transparent to-pink-200" />
-        </div>
-
-        {/* Moments section */}
-        <div>
-          <div className="text-center mb-14">
-            <h2 className="text-3xl font-black text-pink-600 mb-3">مواقف بينا وذكريات حلوة 📸</h2>
-            <p className="text-pink-400 text-lg">لحظات حفرت في قلبي ومش هنساها أبداً</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {moments.map((m, i) => (
-              <div key={i} className="glass-card rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center flex flex-col items-center justify-center min-h-[160px]"
-                style={{ background: 'linear-gradient(135deg, #fff0f5, #ffe4f0)' }}>
-                <div className="text-4xl mb-4" style={{ animationDelay: `${i * 0.2}s` }}>
-                  {m.icon}
-                </div>
-                <p className="text-pink-700 font-bold text-md leading-relaxed">
-                  {m.text}
-                </p>
               </div>
             ))}
           </div>

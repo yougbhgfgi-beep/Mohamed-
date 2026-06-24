@@ -1,4 +1,4 @@
-import { Heart, Star } from 'lucide-react';
+﻿import { Heart, Star } from 'lucide-react';
 
 export default function HeroSection() {
   return (
@@ -14,11 +14,11 @@ export default function HeroSection() {
       {/* Main title */}
       <div className="mb-4">
         <p className="text-pink-400 font-semibold text-xl mb-3 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-          ✨ 26/6/2003 ✨
+          ✨ 1/7/2000 ✨
         </p>
         <h1 className="font-black leading-tight shimmer-text"
           style={{ fontSize: 'clamp(3.5rem, 10vw, 7rem)' }}>
-          شمس 🔆 Shams
+          محمد 🔆 𝑀𝑜ℎ𝑎𝑚𝑀𝑒𝑑
         </h1>
         <p className="text-2xl font-bold text-pink-500 mt-3 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
           عيد ميلاد سعيد 🎂
@@ -28,7 +28,7 @@ export default function HeroSection() {
       {/* Subtitle */}
       <p className="text-pink-400 text-lg max-w-md leading-relaxed animate-fade-in-up font-medium"
         style={{ animationDelay: '0.5s' }}>
-        لأجملِ فتاة في الكون، نُهديكِ هذا الموقع بكل المحبة والتقدير 💕
+        لأجملِ إنسان في الكون، نُهديك هذا الموقع بكل المحبة والتقدير 💕
       </p>
 
       {/* Heart divider */}
@@ -42,14 +42,14 @@ export default function HeroSection() {
       <div className="glass-card rounded-full px-8 py-4 shadow-lg"
         style={{ animationDelay: '0.3s' }}>
         <p className="text-pink-600 font-bold text-lg">
-          🎀 23 سنة من الجمال والتألق 🎀
+          🎀         25 سنة من العظمة والتألق 🎀
         </p>
       </div>
 
       {/* Scroll hint */}
       <div className="absolute bottom-10 left-0 right-0 flex flex-col items-center gap-2"
         style={{ animationDelay: '1s' }}>
-        <p className="text-pink-300 text-sm font-medium">اسحبي للأسفل 🌸</p>
+        <p className="text-pink-300 text-sm font-medium">اسحب للأسفل 🌸</p>
         <div className="w-6 h-10 rounded-full border-2 border-pink-300 flex items-start justify-center pt-2">
           <div className="w-1.5 h-3 rounded-full bg-pink-400" />
         </div>

@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
-import { X, ImagePlus } from 'lucide-react';
+import { X } from 'lucide-react';
 
 const IMAGES = [
-  { src: './assets/img1.jpeg', label: 'كل نظرة في عينيكي بتخطف قلبي من جديد 💖' },
+  { src: './assets/img1.jpeg', label: 'كل نظرة في عينيك بتخطف قلبي من جديد 💖' },
   { src: './assets/img2.jpeg', label: 'أحلى صدفة وأجمل هدية في حياتي ✨' },
-  { src: './assets/img3.jpeg', label: 'معاكي كل لحظة بتبقى ذكرى ما تتنسيش 🌸' },
+  { src: './assets/img3.jpeg', label: 'معاك كل لحظة بتبقى ذكرى ما تتنسيش 🌸' },
+  { src: './gallery/img4.jpeg', label: 'انت الدنيا كلها يا حبيبي 💝' },
 ];
 
 export default function GallerySection() {
@@ -29,7 +30,7 @@ export default function GallerySection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {IMAGES.map((img, i) => (
             <div key={i} className="gallery-item rounded-3xl overflow-hidden shadow-xl cursor-pointer relative group border-4 border-white"
               onClick={() => setSelected(img)}>

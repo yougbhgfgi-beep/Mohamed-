@@ -17,14 +17,13 @@ type Stage = 'login' | 'envelope' | 'main';
 export default function App() {
   const [stage, setStage] = useState<Stage>('login');
   const [musicOn, setMusicOn] = useState(false);
-  const envelopeAudioRef = useRef<HTMLAudioElement | null>(null);
   const mainAudioRef = useRef<HTMLAudioElement | null>(null);
 
   const handleLogin = useCallback(() => {
     setStage('envelope');
     setTimeout(() => {
-      if (envelopeAudioRef.current) {
-        envelopeAudioRef.current.play().catch(() => {});
+      if (mainAudioRef.current) {
+        mainAudioRef.current.play().catch(() => {});
         setMusicOn(true);
       }
     }, 300);
@@ -32,34 +31,18 @@ export default function App() {
 
   const handleCloseEnvelope = useCallback(() => {
     setStage('main');
-    if (musicOn) {
-      if (envelopeAudioRef.current) envelopeAudioRef.current.pause();
-      if (mainAudioRef.current) mainAudioRef.current.play().catch(() => {});
-    }
-  }, [musicOn]);
+  }, []);
 
   const toggleMusic = useCallback(() => {
-    const currentAudio = stage === 'envelope' ? envelopeAudioRef.current : mainAudioRef.current;
-    if (!currentAudio) return;
-
+    const audio = mainAudioRef.current;
+    if (!audio) return;
     if (musicOn) {
-      currentAudio.pause();
+      audio.pause();
     } else {
-      currentAudio.play().catch(() => {});
+      audio.play().catch(() => {});
     }
     setMusicOn(!musicOn);
-  }, [musicOn, stage]);
-
-  useEffect(() => {
-    if (!musicOn) return;
-    if (stage === 'envelope') {
-      mainAudioRef.current?.pause();
-      envelopeAudioRef.current?.play().catch(() => {});
-    } else if (stage === 'main') {
-      envelopeAudioRef.current?.pause();
-      mainAudioRef.current?.play().catch(() => {});
-    }
-  }, [stage, musicOn]);
+  }, [musicOn]);
 
   if (stage === 'login') {
     return <LoginPage onLogin={handleLogin} />;
@@ -83,9 +66,8 @@ export default function App() {
         </button>
       </div>
 
-      {/* Hidden audio elements */}
-      <audio ref={envelopeAudioRef} src="./main-song.mpeg" loop preload="auto" />
-      <audio ref={mainAudioRef} src="./08.Sadakny_Khalas.mp3" loop preload="auto" />
+      {/* Hidden audio element */}
+      <audio ref={mainAudioRef} src="./bg-song.mp4" loop preload="auto" />
 
       {stage === 'envelope' && (
         <EnvelopeModal onClose={handleCloseEnvelope} />

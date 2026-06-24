@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import { Sparkles, X } from 'lucide-react';
 
 export default function MagicSection() {
@@ -13,15 +13,15 @@ export default function MagicSection() {
   return (
     <section className="relative z-10 py-20 px-4 text-center">
       <div className="max-w-xl mx-auto">
-        <h2 className="text-3xl font-black text-pink-600 mb-3">رسالة خاصة لكِ 💌</h2>
-        <p className="text-pink-400 mb-10 text-lg">اضغطي على الزر لتكتشفي ما بداخله</p>
+        <h2 className="text-3xl font-black text-pink-600 mb-3">رسالة خاصة لك 💌</h2>
+        <p className="text-pink-400 mb-10 text-lg">اضغط على الزر لتكتشف ما بداخله</p>
 
         <button onClick={() => setOpen(true)}
           className="group relative px-12 py-5 rounded-full font-bold text-2xl text-white transition-all duration-300 hover:scale-110 active:scale-95"
           style={{ background: 'linear-gradient(135deg, #ff69b4, #ff1493, #c2185b)' }}>
           <span className="flex items-center gap-3">
             <Sparkles size={26} className="group-hover:rotate-12 transition-transform" />
-            اضغطي هنا 💖
+            اضغط هنا 💖
             <Sparkles size={26} className="group-hover:-rotate-12 transition-transform" />
           </span>
         </button>
@@ -40,23 +40,23 @@ export default function MagicSection() {
 
             <div className="text-center mb-6">
               <div className="text-5xl mb-3">💝</div>
-              <h3 className="text-3xl font-black shimmer-text">تهانينا يا شمس 🔆 Shams!</h3>
+              <h3 className="text-3xl font-black shimmer-text">تهانينا يا محمد 🔆 𝑀𝑜ℎ𝑎𝑚𝑀𝑒𝑑</h3>
             </div>
 
             <div className="space-y-3 text-pink-700 leading-relaxed">
               <p className="text-lg font-semibold">
-                🎉 كل عام وانتي بخير يا أجمل إنسانة في الكون!
+                🎉 كل عام وانت بخير يا أجمل إنسان في الكون!
               </p>
               <p>
-                في هذا اليوم الخاص، أتمنى أن يمتلئ قلبكِ بالفرح،
-                وأن تُحقّقي كل أحلامكِ وطموحاتكِ. 🌟
+                في هذا اليوم الخاص، أتمنى أن يمتلئ قلبك بالفرح،
+                وأن تُحقق كل أحلامك وطموحاتك. 🌟
               </p>
               <p>
-                انتي تستحقين كل خير، كل حب، وكل سعادة.
-                لا تنسي أبداً كم انتي مميزة وجميلة. 🌸
+                انت تستحق كل خير، كل حب، وكل سعادة.
+                لا تنس أبداً كم انت مميز وجميل. 🌸
               </p>
               <p className="font-bold text-pink-600">
-                عيد ميلادكِ الثالث والعشرين... بداية أجمل فصول حياتكِ! ✨
+                عيد ميلادك الخامس والعشرين... بداية أجمل فصول حياتك! ✨
               </p>
             </div>
 

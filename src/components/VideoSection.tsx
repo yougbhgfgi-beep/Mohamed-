@@ -3,7 +3,7 @@ export default function VideoSection() {
     <section className="relative z-10 py-20 px-4">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-14">
-          <h2 className="text-3xl font-black text-pink-600 mb-3">فيديو خاص لكِ 🎬</h2>
+          <h2 className="text-3xl font-black text-pink-600 mb-3">فيديو خاص لك 🎬</h2>
           <p className="text-pink-400 text-lg">لحظات لا تُنسى بالصوت والصورة</p>
           <div className="flex items-center justify-center gap-3 mt-5">
             <div className="h-px w-20 bg-gradient-to-r from-transparent to-pink-300" />
@@ -25,7 +25,7 @@ export default function VideoSection() {
             />
           </div>
           <div className="p-6 text-center">
-            <p className="text-pink-500 font-semibold">اضغطي على التشغيل لمشاهدة الفيديو 🎀</p>
+            <p className="text-pink-500 font-semibold">اضغط على التشغيل لمشاهدة الفيديو 🎀</p>
           </div>
         </div>
       </div>

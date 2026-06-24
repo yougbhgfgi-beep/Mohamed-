@@ -46,13 +46,13 @@ function calculateElapsed(startDate: Date): TimeElapsed {
 }
 
 export default function CountersSection() {
-  const [bdayTime, setBdayTime] = useState<TimeElapsed>(calculateElapsed(new Date('2003-06-26T00:00:00')));
-  const [meetTime, setMeetTime] = useState<TimeElapsed>(calculateElapsed(new Date('2025-09-04T00:00:00')));
+  const [bdayTime, setBdayTime] = useState<TimeElapsed>(calculateElapsed(new Date('2000-07-01T00:00:00')));
+  const [meetTime, setMeetTime] = useState<TimeElapsed>(calculateElapsed(new Date('2023-06-01T00:00:00')));
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setBdayTime(calculateElapsed(new Date('2003-06-26T00:00:00')));
-      setMeetTime(calculateElapsed(new Date('2025-09-04T00:00:00')));
+      setBdayTime(calculateElapsed(new Date('2000-07-01T00:00:00')));
+      setMeetTime(calculateElapsed(new Date('2023-06-01T00:00:00')));
     }, 1000);
     return () => clearInterval(interval);
   }, []);
@@ -76,8 +76,8 @@ export default function CountersSection() {
               <Clock size={24} />
             </div>
           </div>
-          <h3 className="text-xl md:text-2xl font-black text-pink-600 mb-2">منذ أن نورتي الدنيا ✨</h3>
-          <p className="text-sm text-pink-400 mb-6 font-semibold">26 يونيو 2003</p>
+          <h3 className="text-xl md:text-2xl font-black text-pink-600 mb-2">منذ أن نورت الدنيا ✨</h3>
+          <p className="text-sm text-pink-400 mb-6 font-semibold">1 يوليو 2000</p>
           
           <div className="grid grid-cols-3 gap-2 md:gap-3" dir="rtl">
             <CounterBox label="سنة" value={bdayTime.years} />
@@ -98,7 +98,7 @@ export default function CountersSection() {
             </div>
           </div>
           <h3 className="text-xl md:text-2xl font-black text-pink-600 mb-2">منذ أول نظرة ومقابلة 💖</h3>
-          <p className="text-sm text-pink-400 mb-6 font-semibold">4 سبتمبر 2025</p>
+          <p className="text-sm text-pink-400 mb-6 font-semibold">1 يونيو 2023</p>
           
           <div className="grid grid-cols-3 gap-2 md:gap-3" dir="rtl">
             <CounterBox label="سنة" value={meetTime.years} />

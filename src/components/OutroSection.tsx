@@ -1,15 +1,15 @@
-import { useState, useEffect } from 'react';
-import { X, Heart, Sparkles, ArrowRight } from 'lucide-react';
+﻿import { useState, useEffect } from 'react';
+import { Heart, Sparkles, ArrowRight } from 'lucide-react';
 
 const OUTRO_LINES = [
-  'إلى روحي وشريكة عمري... شمس 🔆 Shams',
-  'حبي لكِ لا يُكتب في سطور، ولا تكفيه الكلمات...',
-  'منذ ✨ 4/9/2025 ✨، عرفت معنى السعادة الحقيقية...',
-  'انتي النور الذي أضاء حياتي، والدفء الذي يسكن قلبي.',
-  'كل ثانية معكِ هي حياة كاملة...',
-  'وكل نبضة في قلبي تنطق باسمكِ.',
-  'عيد ميلادكِ الثالث والعشرين هو احتفال بوجود أعظم نعمة في حياتي.',
-  'كل عام وانتي عشقي الأبدي... أحبك أكثر مما تتخيلين. 💖',
+  'إلى روحي وشريك عمري... محمد 🔆 𝑀𝑜ℎ𝑎𝑚𝑀𝑒𝑑',
+  'حبي لك لا يُكتب في سطور، ولا تكفيه الكلمات...',
+  'منذ ✨ 1/6/2023 ✨، عرفت معنى السعادة الحقيقية...',
+  'انت النور الذي أضاء حياتي، والدفء الذي يسكن قلبي.',
+  'كل ثانية معك هي حياة كاملة...',
+  'وكل نبضة في قلبي تنطق باسمك.',
+  'عيد ميلادك الخامس والعشرين هو احتفال بوجود أعظم نعمة في حياتي.',
+  'كل عام وانت عشقي الأبدي... أحبك أكثر مما تتخيل. 💖',
 ];
 
 export default function OutroSection() {
@@ -41,7 +41,7 @@ export default function OutroSection() {
         <div className="mb-8">
           <div className="text-5xl mb-4">🎀</div>
           <h2 className="text-3xl font-black text-pink-600 mb-3">الخاتمة 🌹</h2>
-          <p className="text-pink-400 text-lg">رسالة أخيرة لقلبكِ الجميل</p>
+          <p className="text-pink-400 text-lg">رسالة أخيرة لقلبك الجميل</p>
         </div>
 
         <button onClick={() => setPlaying(true)}
@@ -50,7 +50,7 @@ export default function OutroSection() {
           <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
           <span className="flex items-center gap-3 relative z-10">
             <Heart size={26} className="fill-white group-hover:scale-110 transition-transform" />
-            شاهدي الخاتمة
+            شاهد الخاتمة
             <Heart size={26} className="fill-white group-hover:scale-110 transition-transform" />
           </span>
         </button>
@@ -60,7 +60,7 @@ export default function OutroSection() {
           <span className="text-pink-300 text-2xl animate-spin-slow">✨</span>
           <div className="h-px w-28 bg-gradient-to-l from-transparent to-pink-300" />
         </div>
-        <p className="mt-4 text-pink-300 text-sm font-semibold">صُنع هذا الموقع بكل المحبة خصيصاً لكِ يا شمس 🔆 Shams</p>
+        <p className="mt-4 text-pink-300 text-sm font-semibold">صُنع هذا الموقع بكل المحبة خصيصاً لك يا محمد 🔆 𝑀𝑜ℎ𝑎𝑚𝑀𝑒𝑑</p>
       </div>
 
       {playing && (
@@ -109,11 +109,11 @@ export default function OutroSection() {
               <div className="glass-card rounded-3xl p-8 max-w-md w-full shadow-[0_0_50px_rgba(255,20,147,0.3)] animate-fade-in-scale text-center relative border border-pink-500/30 bg-black/40 backdrop-blur-md mt-10">
                 
                 <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-32 h-32 rounded-full border-4 border-pink-400 overflow-hidden shadow-[0_0_40px_rgba(255,105,180,0.6)] z-20 bg-pink-100">
-                  <img src="./assets/img3.jpeg" alt="شمس" className="w-full h-full object-cover" />
+                  <img src="./assets/img3.jpeg" alt="محمد" className="w-full h-full object-cover" />
                 </div>
 
                 <div className="mt-16 mb-8">
-                  <p className="text-white text-4xl font-black shimmer-text mb-3">شمس 🔆 Shams</p>
+                  <p className="text-white text-4xl font-black shimmer-text mb-3">محمد 🔆 𝑀𝑜ℎ𝑎𝑚𝑀𝑒𝑑</p>
                   <div className="flex justify-center items-center gap-2 mb-4">
                     <Sparkles className="text-pink-400" size={18} />
                     <p className="text-pink-200 font-semibold text-lg tracking-wide">أجمل صدفة في عمري</p>

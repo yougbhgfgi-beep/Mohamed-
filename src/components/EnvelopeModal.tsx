@@ -1,14 +1,8 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import { X, Heart } from 'lucide-react';
 
 const PARAGRAPHS = [
-  'يا من سكنت قلبي وروحى، يا من جعلت حياتي أكثر جمالا وألوانًا، في هذا اليوم المميز، أريد أن أعبر لك عن مدى حبي بك .. "كل عام وانتي الحب الذي لا يتغير، القمر الذي ينير لي ليالي، يا أجمل هدية من الله، في كل مرة أنظر في عينيك، أجد نفسي أغرق في بحر من الحب والعشق، كل عام وانتي بخير يا عمري"',
-  'وفي هذا اليوم الذي يحتفل فيه العالم بقدومك، أريد أن أخبرك كم أنا محظوظ بوجودك في حياتي. أتذكر أول مره تحدثنا فيها، شعرت وكأنني أعرفك منذ الأزل. منذ ذلك الحين، أصبحتي جزءًا لا يتجزأ من حياتي، شريكة أسرارى، وسندي في كل خطوة ..',
-  'لقد مررنا معًا بالكثير من اللحظات الجميلة، وبعض اللحظات الصعبة، ولكن في كل مرة كنا نخرج منها أقوى وأكثر ارتباطًا ببعضنا البعض. أتذكر عندما... (كل مره بنتكلم فيها). تلك اللحظات من أجمل اللحظات في حياتي، ولا أنساها أبدًا.',
-  'انتي أكثر من مجرد صديقة، انتي أختي، انتي مراتي، انتي حبييتي ونصف روحي. انتي دائمًا موجودة عندما أحتاجك، ودائمًا تدعميني وتشجعيني على تحقيق أحلامي.',
-  'كل سنة وانتي نور حياتي وسندي في الدنيا، انا احبك اكتر مما تستطيعين تخيلة.',
-  'انتي اجمل قصيده كتبت واروع اغنية سمعتها. كل سنه وانتي بخير ياحبيبتي، انتي كل شى بالنسبالي وسوف تبقين كذلك الي الابد. انتي الفن اللي بيترسم كل يوم والموسيقي اللي بسمعها في كل لحظه. قلبك هو منزلي وعيناكي هما جنتي. أحبك اكتر من عدد النجوم في السماء، انتي الشمس التي تضيء لي طريقي، انتي نص قلبي الاجمل.',
-  'انتي مصدر قوتي، انا ممتن لكل لحظه قضيناها سوا، وعلي كل ذكري جميله جمعتنا. احبك اكثر من اي شي اخر في العالم، كل سنة وانتي طيبه يا روح قلبي، انا أحبك نيابة عن كل جزء بداخلي يحبك.'
+  'كل سنه وانت معايا يا حبيبي وعقبال مليون سنه كل سنه وانت جنبي كل سنه وانت في حياتي كل سنه وانت مالي عليا دنيتي كل سنه وانت منور حياتي بوجودك وكل سنه وانت احلى واجمل حبيب في الدنيا وعقبال سنين كتير بينا يا روح قلبي والعمر كله ليك وجنبي وفي حياتي يا حياتي كل سنه وانت حبيبي ونور عيني وابويا واخويا وصاحبي وابني وسندي وظهري ربنا يديم وجودك دايما في حياتي يا نور عيني ان شاء الله السنه الجايه ابقى انا وانت في بيت واحد كل سنه وانا وانت بنتخانق وكل سنه وانا مطلعه عينك وعارفه وكل سنه وانت معليلى ضغطي بس والله العظيم بحبك وما عنديش اغلى منك كل سنه وانت احلى اب في الدنيا بجد انت بطل حياتي يا احلى رزق من ربنا ويا رب تحقق كل اللي بتتمناه ياحبيب قلبي واشوفك دايما مبسوط يااغلي من عمري واسعد واحد في الدنيا والضحكه الحلوه ما تفارقش والشك ابدا وما اشوفش فيك حاجه وحشه ودائما تبقى في حياتي يا محمد  بجد ده احلى يوم في عمري عشان اليوم اللي جيت نورت الدنيا فيه  ياحياتي ونورت دنيتي وشرفت حياتي بوجودك فيها بجد انا متلخبطه ومش عارفه اكتب لك ايه عشان انا مهما اتكلم عنك مش هقدر اوصف انا بحبك قد ايه ولا غلاوتك في قلبي عامله ازاي والله ربنا شاهد على كلامي ان انت قبل ما تبقى حبيب ليا انت اب ليا ما بقاش فارق عندي صحاب ولا اي حاجه في الدنيا عشان انت بقيت سري واماني واي حاجه بعملها في حياتي تبقى لازم انت اول واحد تعرفها لما بعمل اي حاجه بجري عليك زي العيله الصغيره اللي بتجري على ابوها ده بجد مش كلام واكتب لك الكلام ده بجد من جوه قلبي وطالع بحب يا حبيبي عارفه ان الفتره اللي فاتت ما كانتش احسن حاجه تصدقني  اهم حاجه انت معايا وجنبي وبسمع صوتك يا اغلى حاجه في حياتي انا بجد بحبك اوي وبعشق وعايزك  جنبي انت اللي يتقال عليك السند بجد انت احلى عوض من ربنا ليا يا اغلى من عمري وعايزه اقول لك على حاجه يا محمد انا مش  هيهدى لي بال ولا هرتاح غير لما اسمك يبقى في ضهر بطاقتي اعمل حسابك على كده فكرك ان انا ممكن اسيبك او ابعد عنك ده بعينك يا حبيبي ولا انت ليك غيري ولا انا ليا غيرك  بحبك يا احلا ابو مالك فىىالدنيا كل سنه وانت تعجوز بس بحبك 😂❤❤️‍🩹❤️‍🩹❤️‍🩹❤️‍🩹'
 ];
 
 const TypewriterEffect = () => {
@@ -59,7 +53,7 @@ export default function EnvelopeModal({ onClose }: Props) {
           /* ENVELOPE CLOSED */
           <div className="text-center">
             <p className="text-pink-600 font-bold text-xl mb-8">
-              ✉️ رسالة خاصة لكِ... اضغطي لفتحها 💌
+              ✉️ رسالة خاصة لك... اضغط لفتحها 💌
             </p>
             <button onClick={() => setOpened(true)}
               className="relative mx-auto block cursor-pointer group transition-transform hover:scale-105">
@@ -108,40 +102,11 @@ export default function EnvelopeModal({ onClose }: Props) {
                   <span key={i}>{e}</span>
                 ))}
               </div>
-              <h2 className="text-3xl md:text-4xl font-black shimmer-text">إلى... شمس 🔆 Shams 🌹</h2>
+              <h2 className="text-3xl md:text-4xl font-black shimmer-text">إلى... محمد 🔆 𝑀𝑜ℎ𝑎𝑚𝑀𝑒𝑑</h2>
             </div>
 
-            <div className="text-right leading-relaxed" style={{ fontFamily: 'Cairo', color: '#8b1a4a' }}>
+            <div className="text-right leading-relaxed whitespace-pre-line" style={{ fontFamily: 'Cairo', color: '#8b1a4a' }}>
               <TypewriterEffect />
-
-              <div className="my-8 flex items-center justify-center gap-4">
-                <div className="h-px flex-1 bg-gradient-to-r from-transparent to-pink-300" />
-                <Heart size={20} className="text-pink-400 fill-pink-300" />
-                <div className="h-px flex-1 bg-gradient-to-l from-transparent to-pink-300" />
-              </div>
-
-              {/* English Section */}
-              <div className="text-left font-sans space-y-4 text-pink-700/90" style={{ direction: 'ltr' }}>
-                <p className="italic text-lg">
-                  "Happy birthday to my beautiful wife! Every day with you is a gift. I love your sense of humour, your kind heart, and your unwavering support."
-                </p>
-                <p>
-                  Thank you for being my best friend and the love of my life. Here's to many more years of happiness together. Happy birthday to my beautiful wife.. You are the love of my life.. I love you more than words can say.
-                </p>
-                <p>
-                  I'm so grateful to have you in my life.. Thank you for always being there for me.. I'm so lucky to have you in my life.. You make me a better person.
-                </p>
-                <p>
-                  I cherish every moment we spend together.. You are my everything.. My heart belongs to you.. You're the missing piece of my puzzle.
-                </p>
-                <p className="font-semibold text-pink-600">
-                  I love you more with each passing day.. I can't wait to see what adventures we have in store.. Here's to many more years of love and happiness.. I'm so excited to see what the future holds for us.
-                </p>
-                <p className="text-xl font-bold text-pink-500 mt-4">
-                  I love You 💖
-                </p>
-              </div>
-
             </div>
 
             <button onClick={onClose}

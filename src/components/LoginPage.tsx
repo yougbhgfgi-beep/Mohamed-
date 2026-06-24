@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { Heart, Sparkles } from 'lucide-react';
 
 interface Props {
@@ -13,7 +13,7 @@ export default function LoginPage({ onLogin }: Props) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password.toLowerCase() === 'shosho' || password === 'شوشو') {
+    if (password.toLowerCase() === 'love') {
       setLoading(true);
       setTimeout(() => onLogin(), 800);
     } else {
@@ -58,16 +58,16 @@ export default function LoginPage({ onLogin }: Props) {
         <div className="flex justify-center mb-5">
           <div className="relative w-24 h-24 rounded-full flex items-center justify-center overflow-hidden"
             style={{ background: 'linear-gradient(135deg, #ff69b4, #ff1493)', boxShadow: '0 0 30px rgba(255,105,180,0.5)' }}>
-            <img src="./assets/img2.jpeg" alt="شمس" className="w-full h-full object-cover" />
+            <img src="./assets/img2.jpeg" alt="محمد" className="w-full h-full object-cover" />
             <span className="absolute -top-1 -right-1 text-lg">🎂</span>
             <span className="absolute -bottom-1 -left-1 text-sm">✨</span>
           </div>
         </div>
 
         {/* Title */}
-        <h1 className="text-4xl font-black mb-2 shimmer-text">شمس 🔆 Shams</h1>
-        <p className="text-pink-500 font-semibold text-lg mb-1">مرحباً بكِ يا أجمل إنسانة 🌹</p>
-        <p className="text-pink-400 text-sm mb-8">أدخلي كلمة السر الخاصة بكِ</p>
+        <h1 className="text-4xl font-black mb-2 shimmer-text">محمد 🔆 𝑀𝑜ℎ𝑎𝑚𝑀𝑒𝑑</h1>
+        <p className="text-pink-500 font-semibold text-lg mb-1">مرحباً بك يا أجمل إنسان 🌹</p>
+        <p className="text-pink-400 text-sm mb-8">أدخل كلمة السر الخاصة بك</p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="relative">
@@ -75,16 +75,16 @@ export default function LoginPage({ onLogin }: Props) {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="أدخلي كلمة السر..."
+              placeholder="أدخل كلمة السر..."
               className="pink-input w-full px-5 py-4 rounded-2xl border-2 border-pink-200 bg-white/70 text-center text-pink-700 text-lg font-semibold placeholder-pink-300 transition-all"
               style={{ direction: 'ltr', letterSpacing: '0.3em' }}
             />
           </div>
 
           {error && (
-            <p className="text-red-400 text-sm font-medium animate-fade-in-up">
-              كلمة السر غلط، حبيبتي 💔 حاولي تاني
-            </p>
+              <p className="text-red-400 text-sm font-medium animate-fade-in-up">
+                كلمة السر غلط، حبيبي 💔 حاول تاني
+              </p>
           )}
 
           <button type="submit" disabled={loading}
@@ -98,13 +98,13 @@ export default function LoginPage({ onLogin }: Props) {
             ) : (
               <span className="flex items-center justify-center gap-2">
                 <Heart size={20} />
-                ادخلي يا قلبي
+                ادخل يا قلبي
               </span>
             )}
           </button>
         </form>
 
-        <p className="mt-6 text-pink-300 text-xs">هذا الموقع صُنع بكل الحب خصيصاً لكِ 💝</p>
+        <p className="mt-6 text-pink-300 text-xs">هذا الموقع صُنع بكل الحب خصيصاً لك 💝</p>
       </div>
     </div>
   );
