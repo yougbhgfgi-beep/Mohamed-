@@ -80,7 +80,7 @@ export default function CountersSection() {
           <p className="text-sm text-pink-400 mb-6 font-semibold">1 يوليو 2000</p>
           
           <div className="grid grid-cols-3 gap-2 md:gap-3" dir="rtl">
-            <CounterBox label="سنة" value={bdayTime.years} />
+            <CounterBox label="سنة" value={new Date().getFullYear() - 2000} />
             <CounterBox label="شهر" value={bdayTime.months} />
             <CounterBox label="يوم" value={bdayTime.days} />
             <CounterBox label="ساعة" value={bdayTime.hours} />
