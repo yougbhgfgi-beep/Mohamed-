@@ -42,7 +42,7 @@ export default function HeroSection() {
       <div className="glass-card rounded-full px-8 py-4 shadow-lg"
         style={{ animationDelay: '0.3s' }}>
         <p className="text-pink-600 font-bold text-lg">
-          🎀         25 سنة من العظمة والتألق 🎀
+          🎀         26 سنة من العظمة والتألق 🎀
         </p>
       </div>
 

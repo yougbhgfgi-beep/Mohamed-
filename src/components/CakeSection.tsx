@@ -101,7 +101,7 @@ export default function CakeSection() {
           {/* Candles row */}
           <div className="flex gap-2 items-end mb-1 transition-transform group-hover:scale-105 z-20" dir="ltr">
             <NumberCandle digit="2" />
-            <NumberCandle digit="5" />
+            <NumberCandle digit="6" />
           </div>
 
           {/* Top tier */}
@@ -175,7 +175,7 @@ export default function CakeSection() {
               عيد ميلاد سعيد يا محمد 🔆 𝑀𝑜ℎ𝑎𝑚𝑀𝑒𝑑
             </h3>
             <p className="text-pink-700 leading-relaxed text-lg">
-              25 سنة من العظمة والرجولة والجمال...
+              26 سنة من العظمة والرجولة والجمال...
               أتمنى لك سنة مليئة بالسعادة والنجاح والحب والخير.
               كل عام وانت بخير يا قلبي 💖
             </p>
